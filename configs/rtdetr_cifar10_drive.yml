@@ -1,0 +1,11 @@
+_BASE_: [
+  '../datasets/cifar10_detection.yml',
+  '../runtime.yml',
+  '_base_/optimizer_6x.yml',
+  '_base_/rtdetr_r50vd.yml',
+  '_base_/rtdetr_reader.yml',
+]
+
+weights: /content/drive/MyDrive/RT_DETR_Project/models/model_final
+find_unused_parameters: True
+log_iter: 200

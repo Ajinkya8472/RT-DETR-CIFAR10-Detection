@@ -1,0 +1,20 @@
+metric: COCO
+num_classes: 10
+
+TrainDataset:
+  name: COCODataSet
+  image_dir: images/train
+  anno_path: annotations/train.json
+  dataset_dir: /content/cifar10_detection
+  data_fields: ['image', 'gt_bbox', 'gt_class', 'is_crowd']
+
+EvalDataset:
+  name: COCODataSet
+  image_dir: images/val
+  anno_path: annotations/val.json
+  dataset_dir: /content/cifar10_detection
+
+TestDataset:
+  name: ImageFolder
+  anno_path: annotations/val.json
+  dataset_dir: /content/cifar10_detection
